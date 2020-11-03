@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { CardList } from "./components/card-list/card-list.component";
+import { SearchBox } from "./components/search-box/search-box.component";
 import "./App.css";
 
 // Run with 'npm start'
@@ -9,6 +10,7 @@ class App extends Component {
 
     this.state = {
       monsters: [],
+      searchField: "",
     };
   }
 
@@ -21,9 +23,21 @@ class App extends Component {
   }
 
   render() {
+    // Same as saying const monsters = this.state.monsters;
+    const { monsters, searchField } = this.state;
+    // Filter out the monsters who's name does not include the user's search
+    const filteredMonsters = monsters.filter((monster) =>
+      monster.name.toLowerCase().includes(searchField.toLowerCase())
+    );
+
     return (
       <div className="App">
-        <CardList monsters={this.state.monsters}/>
+        <SearchBox
+          placeholder="Search for monster..."
+          // OnChange of the search bar, get the value that user is typeing in and update the state's searchField
+          handleChange={(e) => this.setState({ searchField: e.target.value })}
+        />
+        <CardList monsters={filteredMonsters} />
       </div>
     );
   }
