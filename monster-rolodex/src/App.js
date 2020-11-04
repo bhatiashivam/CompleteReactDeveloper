@@ -22,6 +22,11 @@ class App extends Component {
       .then((users) => this.setState({ monsters: users }));
   }
 
+  handleChange = (e) => {
+    this.setState({ searchField: e.target.value })
+  }
+
+
   render() {
     // Same as saying const monsters = this.state.monsters;
     const { monsters, searchField } = this.state;
@@ -32,10 +37,11 @@ class App extends Component {
 
     return (
       <div className="App">
+        <h1>Monsters Rolodex</h1>
         <SearchBox
           placeholder="Search for monster..."
           // OnChange of the search bar, get the value that user is typeing in and update the state's searchField
-          handleChange={(e) => this.setState({ searchField: e.target.value })}
+          handleChange={this.handleChange}
         />
         <CardList monsters={filteredMonsters} />
       </div>
