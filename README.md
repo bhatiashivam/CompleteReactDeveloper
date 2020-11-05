@@ -1,6 +1,22 @@
 # CompleteReactDeveloper
 This repository holds all the work done in the "Complete React Developer in 2021 (w/ Redux, Hooks, GraphQL)" Udemy Course taught by Andrei Neagoie, Yihua Zhang
 
+# Projects
+
+```python
+monster-rolodex
+- Implmenting React basics
+- Display list of monsters and their information
+- Search for monsters based on their name
+```
+```python
+crwn-clothing
+- React Master Project
+- e-commerce master project
+- Online clothing store with registration and payment
+```
+
+
 # Topics Covered
 - React Basics
 - React Router
