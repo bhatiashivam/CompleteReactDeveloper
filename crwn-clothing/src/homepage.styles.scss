@@ -22,14 +22,17 @@
   border: 1px solid black;
   margin: 0 7.5px 15px;
 
+  // Menu Item's first child gets this styling
   &:first-child {
     margin-right: 7.5px;
   }
 
+  // Menu Item's second child gets this styling
   &:last-child {
     margin-left: 7.5px;
   }
 
+  // Any element with class of 'contents' that sits between elements with class 'menu-item' will get these styling
   .content {
     height: 90px;
     padding: 0 25px;
