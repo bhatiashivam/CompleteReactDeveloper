@@ -7,13 +7,18 @@
   justify-content: center;
   border: 1px solid black;
   margin: 0 7.5px 15px;
+  // Prevent the image from zooming in and out of its container
   overflow: hidden;
 
   &:hover {
+    // On hover, change cursor to a finger pointer
     cursor: pointer;
 
     & .background-image {
+      // Scale by 1.1x times
       transform: scale(1.1);
+      // Perform the transition on the transform for 6 seconds
+      // cubic-bezier makes the transition smoother
       transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
     }
 
