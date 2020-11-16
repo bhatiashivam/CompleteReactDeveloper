@@ -1,0 +1,11 @@
+.sign-in {
+  // 30% of the view width
+  width: 30vw;
+  display: flex;
+  // Want the elements to sit vertically
+  flex-direction: column;
+
+  .title {
+    margin: 10px 0;
+  }
+}
